@@ -4,89 +4,89 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap');
 
-/* Valtrix Chef Pro Design System - Deep burgundy, cream/ivory, charcoal, gold accents */
+/* Valtrix Chef Pro Design System - Professional navy, warm gray, refined gold */
 
 @layer base {
   :root {
-    /* Deep Burgundy Primary */
-    --primary: 357 68% 25%;
-    --primary-foreground: 45 100% 95%;
+    /* Professional Navy Primary */
+    --primary: 210 40% 20%;
+    --primary-foreground: 210 20% 95%;
     
-    /* Cream/Ivory Background */
-    --background: 45 100% 97%;
-    --foreground: 357 40% 15%;
+    /* Warm Gray Background */
+    --background: 210 15% 98%;
+    --foreground: 210 25% 15%;
     
-    /* Charcoal Secondary */
-    --secondary: 210 11% 25%;
-    --secondary-foreground: 45 100% 95%;
+    /* Sophisticated Charcoal Secondary */
+    --secondary: 210 15% 30%;
+    --secondary-foreground: 210 15% 95%;
     
-    /* Gold Accents */
-    --accent: 45 100% 65%;
-    --accent-foreground: 357 40% 15%;
+    /* Refined Gold Accents */
+    --accent: 35 65% 50%;
+    --accent-foreground: 210 25% 15%;
     
     /* Supporting Colors */
-    --card: 45 100% 98%;
-    --card-foreground: 357 40% 15%;
-    --popover: 45 100% 98%;
-    --popover-foreground: 357 40% 15%;
-    --muted: 45 20% 92%;
-    --muted-foreground: 357 20% 45%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 45 100% 95%;
-    --border: 45 30% 88%;
-    --input: 45 30% 88%;
-    --ring: 357 68% 25%;
+    --card: 210 20% 99%;
+    --card-foreground: 210 25% 15%;
+    --popover: 210 20% 99%;
+    --popover-foreground: 210 25% 15%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 210 15% 45%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 210 20% 95%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 210 40% 20%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(357, 68%, 25%), hsl(357, 58%, 35%));
-    --gradient-gold: linear-gradient(135deg, hsl(45, 100%, 65%), hsl(35, 90%, 70%));
-    --gradient-elegant: linear-gradient(180deg, hsl(45, 100%, 98%), hsl(45, 50%, 95%));
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210, 40%, 20%), hsl(210, 35%, 30%));
+    --gradient-gold: linear-gradient(135deg, hsl(35, 65%, 50%), hsl(35, 60%, 60%));
+    --gradient-elegant: linear-gradient(180deg, hsl(210, 20%, 99%), hsl(210, 15%, 96%));
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(357, 68%, 25%, 0.2);
-    --shadow-gold: 0 5px 20px -5px hsl(45, 100%, 65%, 0.3);
+    /* Refined Shadows */
+    --shadow-elegant: 0 8px 25px -8px hsl(210, 40%, 20%, 0.15);
+    --shadow-gold: 0 4px 15px -4px hsl(35, 65%, 50%, 0.25);
     
     --radius: 0.75rem;
     
     /* Sidebar */
-    --sidebar-background: 45 100% 98%;
-    --sidebar-foreground: 357 40% 15%;
-    --sidebar-primary: 357 68% 25%;
-    --sidebar-primary-foreground: 45 100% 95%;
-    --sidebar-accent: 45 20% 92%;
-    --sidebar-accent-foreground: 357 40% 15%;
-    --sidebar-border: 45 30% 88%;
-    --sidebar-ring: 357 68% 25%;
+    --sidebar-background: 210 20% 99%;
+    --sidebar-foreground: 210 25% 15%;
+    --sidebar-primary: 210 40% 20%;
+    --sidebar-primary-foreground: 210 20% 95%;
+    --sidebar-accent: 210 15% 93%;
+    --sidebar-accent-foreground: 210 25% 15%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 210 40% 20%;
   }
 
   .dark {
-    /* Dark theme adjustments */
-    --background: 357 15% 8%;
-    --foreground: 45 100% 95%;
-    --card: 357 15% 10%;
-    --card-foreground: 45 100% 95%;
-    --popover: 357 15% 10%;
-    --popover-foreground: 45 100% 95%;
-    --primary: 357 68% 35%;
-    --primary-foreground: 45 100% 95%;
-    --secondary: 210 11% 15%;
-    --secondary-foreground: 45 100% 95%;
-    --muted: 357 10% 15%;
-    --muted-foreground: 45 30% 70%;
-    --accent: 45 100% 55%;
-    --accent-foreground: 357 40% 15%;
-    --border: 357 10% 20%;
-    --input: 357 10% 20%;
-    --ring: 357 68% 35%;
+    /* Professional Dark Theme */
+    --background: 210 20% 8%;
+    --foreground: 210 20% 95%;
+    --card: 210 20% 10%;
+    --card-foreground: 210 20% 95%;
+    --popover: 210 20% 10%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 210 40% 35%;
+    --primary-foreground: 210 20% 95%;
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 210 15% 95%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 35 65% 55%;
+    --accent-foreground: 210 25% 15%;
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 210 40% 35%;
     
-    --sidebar-background: 357 15% 8%;
-    --sidebar-foreground: 45 30% 70%;
-    --sidebar-primary: 357 68% 35%;
-    --sidebar-primary-foreground: 45 100% 95%;
-    --sidebar-accent: 357 10% 15%;
-    --sidebar-accent-foreground: 45 100% 95%;
-    --sidebar-border: 357 10% 20%;
-    --sidebar-ring: 357 68% 35%;
+    --sidebar-background: 210 20% 8%;
+    --sidebar-foreground: 210 20% 70%;
+    --sidebar-primary: 210 40% 35%;
+    --sidebar-primary-foreground: 210 20% 95%;
+    --sidebar-accent: 210 15% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 210 40% 35%;
   }
 }
 
