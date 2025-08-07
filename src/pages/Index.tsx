@@ -11,9 +11,20 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-32 gradient-primary text-primary-foreground relative overflow-hidden">
+      <section 
+        className="py-32 text-white relative overflow-hidden min-h-screen flex items-center"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
         <div className="container mx-auto px-4 text-center relative z-10">
-          <Badge variant="outline" className="mb-6 border-primary-foreground text-primary-foreground">
+          <Badge variant="outline" className="mb-6 border-white text-white">
             Professional Catering & Culinary Education
           </Badge>
           <h1 className="text-6xl font-display font-bold mb-6 text-shadow">
@@ -23,7 +34,7 @@ const Index = () => {
             Where culinary excellence meets professional education. We bring exceptional 
             catering to your events and train the next generation of culinary professionals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/catering">
               <Button 
                 size="lg" 
@@ -37,21 +48,11 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="border-white text-white hover:bg-white hover:text-primary"
               >
                 Start Learning
               </Button>
             </Link>
-          </div>
-          
-          {/* Hero Image */}
-          <div className="relative max-w-5xl mx-auto">
-            <img 
-              src={heroImage} 
-              alt="Professional catering and culinary training" 
-              className="w-full h-96 object-cover rounded-lg shadow-elegant"
-            />
-            <div className="absolute inset-0 bg-black/20 rounded-lg"></div>
           </div>
         </div>
       </section>
