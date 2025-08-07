@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChefHat, Users, Award, Star, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-catering.jpg";
+import cateringImage from "@/assets/premium-catering.jpg";
+import educationImage from "@/assets/culinary-education.jpg";
 
 const Index = () => {
   return (
@@ -20,7 +23,7 @@ const Index = () => {
             Where culinary excellence meets professional education. We bring exceptional 
             catering to your events and train the next generation of culinary professionals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link to="/catering">
               <Button 
                 size="lg" 
@@ -40,6 +43,16 @@ const Index = () => {
               </Button>
             </Link>
           </div>
+          
+          {/* Hero Image */}
+          <div className="relative max-w-5xl mx-auto">
+            <img 
+              src={heroImage} 
+              alt="Professional catering and culinary training" 
+              className="w-full h-96 object-cover rounded-lg shadow-elegant"
+            />
+            <div className="absolute inset-0 bg-black/20 rounded-lg"></div>
+          </div>
         </div>
       </section>
 
@@ -58,7 +71,15 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <Card className="shadow-elegant hover:shadow-gold transition-shadow">
+            <Card className="shadow-elegant hover:shadow-gold transition-shadow overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src={cateringImage} 
+                  alt="Premium catering service" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30"></div>
+              </div>
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <ChefHat className="h-8 w-8 text-primary" />
@@ -92,7 +113,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-elegant hover:shadow-gold transition-shadow">
+            <Card className="shadow-elegant hover:shadow-gold transition-shadow overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src={educationImage} 
+                  alt="Culinary education and training" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30"></div>
+              </div>
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Award className="h-8 w-8 text-primary" />
