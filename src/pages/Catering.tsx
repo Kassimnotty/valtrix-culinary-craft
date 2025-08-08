@@ -52,11 +52,33 @@ const Catering = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
+    
+    // WhatsApp integration for booking
+    const whatsappNumber = "+255655734453";
+    const message = `🍽️ CATERING BOOKING REQUEST 🍽️
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Event Date: ${formData.eventDate}
+Event Type: ${formData.eventType}
+Guest Count: ${formData.guestCount}
+Venue: ${formData.venue}
+Menu Preference: ${formData.menuPreference}
+
+Special Requests:
+${formData.specialRequests}
+
+Please provide a quote for this event. Thank you!`;
+    
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+
     toast({
-      title: "Booking Request Submitted!",
+      title: "Booking Request Sent via WhatsApp!",
       description: "We'll contact you within 24 hours to discuss your event details.",
     });
+    
     setFormData({
       name: "",
       email: "",
@@ -206,7 +228,10 @@ const Catering = () => {
                           <SelectItem value="wedding">Wedding</SelectItem>
                           <SelectItem value="corporate">Corporate Event</SelectItem>
                           <SelectItem value="private-party">Private Party</SelectItem>
-                          <SelectItem value="wine-tasting">Wine Tasting</SelectItem>
+                          <SelectItem value="birthday">Birthday Celebration</SelectItem>
+                          <SelectItem value="graduation">Graduation Party</SelectItem>
+                          <SelectItem value="anniversary">Anniversary</SelectItem>
+                          <SelectItem value="cultural">Cultural Event</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -239,13 +264,15 @@ const Catering = () => {
                       <SelectTrigger>
                         <SelectValue placeholder="Select menu style" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="plated-dinner">Plated Dinner</SelectItem>
-                        <SelectItem value="buffet">Buffet Style</SelectItem>
-                        <SelectItem value="cocktail-reception">Cocktail Reception</SelectItem>
-                        <SelectItem value="family-style">Family Style</SelectItem>
-                        <SelectItem value="custom">Custom Menu</SelectItem>
-                      </SelectContent>
+                        <SelectContent>
+                          <SelectItem value="tanzanian-packages">Tanzanian Event Packages</SelectItem>
+                          <SelectItem value="international-menu">International Menu</SelectItem>
+                          <SelectItem value="plated-dinner">Plated Dinner</SelectItem>
+                          <SelectItem value="buffet">Buffet Style</SelectItem>
+                          <SelectItem value="cocktail-reception">Cocktail Reception</SelectItem>
+                          <SelectItem value="family-style">Family Style</SelectItem>
+                          <SelectItem value="custom">Custom Menu</SelectItem>
+                        </SelectContent>
                     </Select>
                   </div>
 
