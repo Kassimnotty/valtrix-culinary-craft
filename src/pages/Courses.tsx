@@ -21,46 +21,157 @@ import {
 const Courses = () => {
   const courseModules = [
     {
+      id: 1,
       title: "Food Hygiene and Safety",
       icon: Shield,
-      description: "Essential food safety practices, HACCP principles, and kitchen hygiene standards.",
+      description: "Essential food safety practices, HACCP principles, and kitchen hygiene standards for professional kitchens.",
       duration: "4 hours",
-      resources: { videos: 8, documents: 12, quizzes: 3 }
+      price: "TSh 85,000",
+      category: "Safety",
+      level: "Beginner",
+      resources: { videos: 8, documents: 12, quizzes: 3 },
+      learningOutcomes: [
+        "Understand HACCP principles and implementation",
+        "Master personal hygiene standards",
+        "Identify food safety hazards and controls",
+        "Apply temperature control procedures"
+      ]
     },
     {
+      id: 2,
       title: "Knife Skills & Techniques",
       icon: Utensils,
-      description: "Master fundamental knife cuts, blade maintenance, and safe handling practices.",
+      description: "Master fundamental knife cuts, blade maintenance, and safe handling practices essential for every chef.",
       duration: "6 hours",
-      resources: { videos: 15, documents: 8, quizzes: 2 }
+      price: "TSh 95,000",
+      category: "Technique",
+      level: "Beginner",
+      resources: { videos: 15, documents: 8, quizzes: 2 },
+      learningOutcomes: [
+        "Execute basic knife cuts with precision",
+        "Maintain and sharpen kitchen knives",
+        "Practice safe knife handling techniques",
+        "Understand different knife types and uses"
+      ]
     },
     {
-      title: "Meat, Poultry & Fish",
+      id: 3,
+      title: "Meat, Poultry & Fish Preparation",
       icon: ChefHat,
-      description: "Proper handling, preparation techniques, and cooking methods for proteins.",
+      description: "Comprehensive protein handling, preparation techniques, and cooking methods for optimal results.",
       duration: "8 hours",
-      resources: { videos: 20, documents: 15, quizzes: 4 }
+      price: "TSh 125,000",
+      category: "Protein",
+      level: "Intermediate",
+      resources: { videos: 20, documents: 15, quizzes: 4 },
+      learningOutcomes: [
+        "Identify quality indicators in proteins",
+        "Master butchery and filleting techniques",
+        "Apply proper cooking methods for each protein",
+        "Understand storage and handling requirements"
+      ]
     },
     {
+      id: 4,
       title: "Stocks, Soups & Sauces",
       icon: Coffee,
-      description: "Foundation techniques for creating flavorful bases and classical sauces.",
+      description: "Foundation techniques for creating flavorful bases and classical sauce preparations.",
       duration: "6 hours",
-      resources: { videos: 12, documents: 10, quizzes: 3 }
+      price: "TSh 105,000",
+      category: "Foundations",
+      level: "Intermediate",
+      resources: { videos: 12, documents: 10, quizzes: 3 },
+      learningOutcomes: [
+        "Prepare classical stocks and broths",
+        "Create mother sauces and derivatives",
+        "Balance flavors and seasonings",
+        "Understand emulsification techniques"
+      ]
     },
     {
-      title: "Baking & Pastry",
+      id: 5,
+      title: "Vegetable Cookery & Preparation",
+      icon: Utensils,
+      description: "Professional vegetable preparation, cooking methods, and presentation techniques.",
+      duration: "5 hours",
+      price: "TSh 90,000",
+      category: "Vegetables",
+      level: "Beginner",
+      resources: { videos: 14, documents: 9, quizzes: 3 },
+      learningOutcomes: [
+        "Master vegetable cutting techniques",
+        "Apply various cooking methods to vegetables",
+        "Preserve nutrients and colors",
+        "Create attractive vegetable presentations"
+      ]
+    },
+    {
+      id: 6,
+      title: "Baking & Pastry Fundamentals",
       icon: CakeSlice,
-      description: "Fundamental baking techniques, bread making, and pastry preparation.",
+      description: "Essential baking techniques, bread making, and pastry preparation for professional kitchens.",
       duration: "10 hours",
-      resources: { videos: 25, documents: 18, quizzes: 5 }
+      price: "TSh 155,000",
+      category: "Baking",
+      level: "Intermediate",
+      resources: { videos: 25, documents: 18, quizzes: 5 },
+      learningOutcomes: [
+        "Understand baking science and ratios",
+        "Prepare basic breads and pastries",
+        "Master mixing methods and techniques",
+        "Create professional dessert presentations"
+      ]
     },
     {
+      id: 7,
+      title: "Cold Food Preparation",
+      icon: Coffee,
+      description: "Salads, appetizers, and cold preparation techniques for professional service.",
+      duration: "4 hours",
+      price: "TSh 80,000",
+      category: "Cold Kitchen",
+      level: "Beginner",
+      resources: { videos: 11, documents: 8, quizzes: 2 },
+      learningOutcomes: [
+        "Prepare professional salads and dressings",
+        "Create attractive cold appetizers",
+        "Master garnishing techniques",
+        "Understand cold food safety principles"
+      ]
+    },
+    {
+      id: 8,
       title: "Menu Planning & Cost Control",
       icon: BookOpen,
-      description: "Menu development, pricing strategies, and kitchen cost management.",
+      description: "Strategic menu development, pricing strategies, and comprehensive kitchen cost management.",
       duration: "5 hours",
-      resources: { videos: 10, documents: 20, quizzes: 4 }
+      price: "TSh 110,000",
+      category: "Management",
+      level: "Advanced",
+      resources: { videos: 10, documents: 20, quizzes: 4 },
+      learningOutcomes: [
+        "Design profitable menu structures",
+        "Calculate food costs and pricing",
+        "Manage inventory and waste",
+        "Analyze menu performance metrics"
+      ]
+    },
+    {
+      id: 9,
+      title: "Professional Kitchen Operations",
+      icon: ChefHat,
+      description: "Kitchen workflow, team management, and professional service standards for commercial kitchens.",
+      duration: "7 hours",
+      price: "TSh 135,000",
+      category: "Operations",
+      level: "Advanced",
+      resources: { videos: 18, documents: 15, quizzes: 4 },
+      learningOutcomes: [
+        "Organize efficient kitchen workflows",
+        "Manage kitchen teams effectively",
+        "Implement quality control systems",
+        "Meet professional service standards"
+      ]
     }
   ];
 
@@ -183,56 +294,84 @@ const Courses = () => {
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">Curriculum</Badge>
             <h2 className="text-4xl font-display font-bold text-primary mb-6">
-              Course Modules
+              9 Professional Culinary Modules
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Six comprehensive modules covering all aspects of professional cookery
+              Comprehensive curriculum covering all essential aspects of professional cookery and kitchen management
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {courseModules.map((module, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courseModules.map((module) => (
+              <Card key={module.id} className="hover:shadow-elegant transition-all duration-300 border-0 shadow-md">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start justify-between mb-4">
                     <div className="p-3 bg-primary/10 rounded-lg">
                       <module.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl">{module.title}</CardTitle>
-                      <div className="flex items-center space-x-2 mt-1">
-                        <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">{module.duration}</span>
-                      </div>
-                    </div>
+                    <Badge variant="outline" className="text-xs">{module.category}</Badge>
                   </div>
-                  <p className="text-muted-foreground">{module.description}</p>
+                  <CardTitle className="text-xl mb-2">{module.title}</CardTitle>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">{module.duration}</span>
+                    </div>
+                    <Badge variant="secondary" className="text-xs">{module.level}</Badge>
+                  </div>
+                  <p className="text-muted-foreground text-sm line-clamp-3">{module.description}</p>
                 </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                <CardContent className="pt-0">
+                  <div className="grid grid-cols-3 gap-3 text-center mb-4">
                     <div>
-                      <div className="text-2xl font-bold text-primary">{module.resources.videos}</div>
+                      <div className="text-lg font-bold text-primary">{module.resources.videos}</div>
                       <div className="text-xs text-muted-foreground">Videos</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-primary">{module.resources.documents}</div>
-                      <div className="text-xs text-muted-foreground">Documents</div>
+                      <div className="text-lg font-bold text-primary">{module.resources.documents}</div>
+                      <div className="text-xs text-muted-foreground">Docs</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-primary">{module.resources.quizzes}</div>
+                      <div className="text-lg font-bold text-primary">{module.resources.quizzes}</div>
                       <div className="text-xs text-muted-foreground">Quizzes</div>
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span>Progress</span>
-                      <span>0%</span>
+                  
+                  <div className="border-t pt-4 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-bold text-primary">{module.price}</span>
+                    <Button 
+                        size="sm" 
+                        className="bg-primary text-primary-foreground hover:bg-primary/90"
+                        onClick={() => window.location.href = `/courses/${module.id}`}
+                      >
+                        View Details
+                      </Button>
                     </div>
-                    <Progress value={0} className="h-2" />
                   </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Badge variant="outline" className="mb-4">Full Program Package</Badge>
+            <Card className="max-w-md mx-auto shadow-elegant border-2 border-primary/20">
+              <CardHeader>
+                <CardTitle className="text-2xl">Complete Culinary Program</CardTitle>
+                <p className="text-muted-foreground">All 9 modules + certification</p>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center mb-4">
+                  <div className="text-sm text-muted-foreground line-through">TSh 1,005,000</div>
+                  <div className="text-3xl font-bold text-primary">TSh 750,000</div>
+                  <div className="text-sm text-accent">Save TSh 255,000!</div>
+                </div>
+                <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold">
+                  Enroll in Full Program
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -316,7 +455,7 @@ const Courses = () => {
               size="lg" 
               className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-gold"
             >
-              Enroll Now - $299
+              Enroll Now - TSh 750,000
             </Button>
             <Button 
               size="lg" 

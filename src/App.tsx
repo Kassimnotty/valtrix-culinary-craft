@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Catering from "./pages/Catering";
 import Menu from "./pages/Menu";
 import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
 import Gallery from "./pages/Gallery";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/catering" element={<Catering />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/courses" element={<Courses />} />
+              <Route path="/courses/:courseId" element={<CourseDetail />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/contact" element={<Contact />} />
